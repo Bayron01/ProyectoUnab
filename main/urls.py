@@ -21,6 +21,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Universidad/', include('Universidad.urls'), name='Universidad'),
+    path('login_auth/', include('login_auth.urls'), name='login_auth'),
     
 ]
 
