@@ -59,6 +59,16 @@ def editarprofesor(request, profesor_id):
     template_name = 'profesor/agregar_profesor.html'
     return render(request, template_name, data)
 
+def eliminarprofesor(request, profesor_id):
+    data = {}
+    profesor = Profesor.objects.get(pk=profesor_id)
+    if request.method == "POST":
+        profesor.delete()
+        return redirect('listar_profesor')
+
+
+    template_name = 'profesor/eliminar_profesor.html'
+    return render(request, template_name, data)
 
 
 

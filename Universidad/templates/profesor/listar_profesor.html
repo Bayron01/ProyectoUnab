@@ -30,11 +30,15 @@
                       <td>{{profesor.nombre}}</td>
                       <td>{{profesor.email}}</td>
                       <td>
-                        <a href="{% url 'editar_profesor' profesor.pk %}" >Editar</a>
+                        <a href="{% url 'editar_profesor' profesor.pk %}" class="btn btn-outline-success my-2 my-sm-0">Editar</a>
                       </td>
                       <td>
-                        <a href="{% url 'detallar_profesor' profesor.pk %}" >Detalle</a>
+                        <a href="{% url 'detallar_profesor' profesor.pk %}" class="btn btn-outline-success my-2 my-sm-0" >Detalle</a>
                       </td>
+                      <td>
+                        <a href="{% url 'eliminar_profesor' profesor.pk %}" class="btn btn-outline-success my-2 my-sm-0" >Eliminar</a>
+                      </td>
+                      
 
                     {% endfor %} 
 
