@@ -1,0 +1,50 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <h1>Listar Profesores</h1>
+            <div class="col-md-12">
+                
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Foto</th>
+                      <th scope="col">Rut</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Accione1</th>
+                      <th scope="col">Accione2</th>
+                      <th scope="col">Accione3</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for profesor in object_list %}
+                    <tr>
+                      <th scope="row">{{profesor.id}}</th> 
+                      <td> <img src="{{profesor.imagen}}" width="100" height="100"></td>
+                      <td><a href="#">{{profesor.rut}}</a></td>
+                      <td>{{profesor.nombre}}</td>
+                      <td>{{profesor.email}}</td>
+                      <td>
+                        <a href="{% url 'editar_profesor' profesor.pk %}" >Editar</a>
+                      </td>
+                      <td>
+                        <a href="{% url 'detallar_profesor' profesor.pk %}" >Detalle</a>
+                      </td>
+
+                    {% endfor %} 
+
+
+                  </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

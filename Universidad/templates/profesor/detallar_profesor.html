@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>Detalle del Profesor</h1>
+        <ul>
+                <li><strong>Rut</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{profesor.rut}}</li>
+                <li><strong>Nombre</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{profesor.nombre}}</li>
+                <li><strong>Apellido</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{profesor.apellido}}</li>
+                <li><strong>Edad</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{profesor.edad}}</li>
+                <li><strong>Email</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{profesor.email}}</li>
+                <li><strong>Direccion</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;{{profesor.direccion}}</li>
+                <li><strong>Telefono</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{profesor.telefono}}</li>
+                <li><strong>Foto</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{<img src="{{profesor.imagen}}" width="100" height="100">}</li>
+                
+        </ul>
+    </div>
+{% endblock %}
