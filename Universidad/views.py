@@ -82,7 +82,7 @@ def agregaralumno(request):
             # aca el formulario valido
             data['form'].save()
 
-            #return redirect('listar_profesor')
+            return redirect('listar_alumno')
 
     else:
         data['form'] = AlumnoForm()
@@ -99,3 +99,36 @@ def listaralumno(request):
     template_name = 'alumno/listar_alumno.html'
     return render(request, template_name, data)
 
+def editaralumno(request, alumno_id):
+    data = {}
+    alumno = Alumno.objects.get(pk=alumno_id)
+    if request.method == "GET":
+        data['form'] = AlumnoForm(instance= alumno)
+
+    else:
+        data['form'] = AlumnorForm(request.POST, request.FILES, instance= alumno)  
+        if data['form'].is_valid():
+            # aca el formulario valido
+            data['form'].save()
+            return redirect('listar_alumno') 
+
+    template_name = 'alumno/agregar_alumno.html'
+    return render(request, template_name, data)
+
+
+def detallaralumno(request, alumno_id):
+    data = {}
+    data['alumno'] = Alumno.objects.get(pk=alumno_id)
+    template_name = 'alumno/detallar_alumno.html'
+    return render(request, template_name, data)
+
+def eliminaralumno(request, alumno_id):
+    data = {}
+    alumno = Alumno.objects.get(pk=alumno_id)
+    if request.method == "POST":
+        alumno.delete()
+        return redirect('listar_alumno')
+
+
+    template_name = 'alumno/eliminar_alumno.html'
+    return render(request, template_name, data)

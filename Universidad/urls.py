@@ -16,5 +16,11 @@ urlpatterns = [
     #Alumno
     path('agregaralumno', views.agregaralumno, name='agregar_alumno'),
     path('listaralumno', views.listaralumno, name='listar_alumno'),
+    path('editaralumno/<int:alumno_id>', views.editaralumno, name='editar_alumno'),
+    path('detallaralumno/<int:alumno_id>', views.detallaralumno, name='detallar_alumno'),
+    path('eliminaralumno/<int:alumno_id>', views.eliminaralumno, name="eliminar_alumno"),
+
+    #Curso
+    
 
 ]

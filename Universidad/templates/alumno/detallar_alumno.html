@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>Detalle del Alumno</h1>
+        <ul>
+                <li><strong>Rut</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{alumno.rut}}</li>
+                <li><strong>Nombre</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{alumno.nombre}}</li>
+                <li><strong>Apellido</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{alumno.apellido}}</li>
+                <li><strong>Edad</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{alumno.edad}}</li>
+                <li><strong>Email</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{alumno.email}}</li>
+                <li><strong>Direccion</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;{{alumno.direccion}}</li>
+                <li><strong>Telefono</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{alumno.telefono}}</li>
+                <li><strong>Foto</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{<img src="{{alumno.imagen.url}}" width="100" height="100">}</li>
+                
+        </ul>
+    </div>
+{% endblock %}
