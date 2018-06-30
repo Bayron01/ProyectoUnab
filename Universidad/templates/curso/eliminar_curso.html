@@ -5,9 +5,9 @@
 
 <form method="POST">
         {% csrf_token %}
-        <h1> Desea eliminar registro? {{alumno.id}} </h1>
+        <h1> Desea eliminar registro? {{curso.id}} </h1>
         <button class="btn btn-danger" type="submit"> Si, eliminar</button>
-        <a class="btn btn-outline-success my-2 my-sm-0" href="{% url 'listar_alumno' %}"> Cancelar</a>
+        <a class="btn btn-outline-success my-2 my-sm-0" href="{% url 'listar_curso' %}"> Cancelar</a>
     </form>
 
 {% endblock %}

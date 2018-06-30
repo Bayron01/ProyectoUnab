@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>Detalle del Curso</h1>
+        <ul>
+                <li><strong>Id_curso</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{curso.id_cusro}}</li>
+                <li><strong>Nombre</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{curso.nombre}}</li>
+                <li><strong>Fecha_Inicio</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{curso.fecha_inicio}}</li>
+                <li><strong>Fecha_Termino</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{curso.fecha_termino}}</li>
+                <li><strong>Cupos</strong>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{curso.cupo}}</li>
+                
+        </ul>
+    </div>
+{% endblock %}

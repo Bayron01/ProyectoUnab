@@ -1,0 +1,50 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <h1>Listar Alumno</h1>
+            <div class="col-md-12">
+                
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Id_curso</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Accione1</th>
+                      <th scope="col">Accione2</th>
+                      <th scope="col">Accione3</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for curso in object_list %}
+                    <tr>
+                      <th scope="row">{{curso.id}}</th> 
+                      <td><a href="#">{{curso.id_curso}}</a></td>
+                      <td>{{curso.nombre}}</td>
+                      <td>
+                        <a href="{% url 'editar_curso' curso.pk %}" class="btn btn-outline-success my-2 my-sm-0">Editar</a>
+                      </td>
+                      <td>
+                        <a href="{% url 'detallar_curso' curso.pk %}" class="btn btn-outline-success my-2 my-sm-0" >Detalle</a>
+                      </td>
+                      <td>
+                        <a href="{% url 'eliminar_curso' curso.pk %}" class="btn btn-outline-success my-2 my-sm-0" >Eliminar</a>
+                      </td>
+                      
+
+                    {% endfor %} 
+
+
+                  </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
