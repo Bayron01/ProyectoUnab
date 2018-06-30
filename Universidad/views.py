@@ -1,13 +1,15 @@
 from django.shortcuts import render
-
-
-
 from Universidad.models import Profesor
 from Universidad.forms import ProfesorForm
 
 
 
+def paginaprincipal(request):
+	data = {}
+	template_name = 'principal/pagina_principal.html'
+	return render(request, template_name, data)
 
+	
 def agregarprofesor(request):
     data = {}
     if request.method == "POST":
@@ -25,5 +27,8 @@ def agregarprofesor(request):
 
     template_name = 'profesor/agregar_profesor.html'
     return render(request, template_name, data)
+
+
+
 
 
