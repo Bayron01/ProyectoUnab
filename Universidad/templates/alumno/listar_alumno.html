@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="row">
-            <h1>Listar Profesores</h1>
+            <h1>Listar Alumno</h1>
             <div class="col-md-12">
                 
 
@@ -22,21 +22,21 @@
                     </tr>
                   </thead>
                   <tbody>
-                    {% for profesor in object_list %}
+                    {% for alumno in object_list %}
                     <tr>
-                      <th scope="row">{{profesor.id}}</th> 
-                      <td> <img src="{{profesor.imagen.url}} " width="100" height="100"></td>
-                      <td><a href="#">{{profesor.rut}}</a></td>
-                      <td>{{profesor.nombre}}</td>
-                      <td>{{profesor.email}}</td>
+                      <th scope="row">{{alumno.id}}</th> 
+                      <td> <img src="{{alumno.imagen.url}} " width="100" height="100"></td>
+                      <td><a href="#">{{alumno.rut}}</a></td>
+                      <td>{{alumno.nombre}}</td>
+                      <td>{{alumno.email}}</td>
                       <td>
-                        <a href="{% url 'editar_profesor' profesor.pk %}" class="btn btn-outline-success my-2 my-sm-0">Editar</a>
+                        <a href="{% url 'editar_alumno' alumno.pk %}" class="btn btn-outline-success my-2 my-sm-0">Editar</a>
                       </td>
                       <td>
-                        <a href="{% url 'detallar_profesor' profesor.pk %}" class="btn btn-outline-success my-2 my-sm-0" >Detalle</a>
+                        <a href="{% url 'detallar_alumno' alumno.pk %}" class="btn btn-outline-success my-2 my-sm-0" >Detalle</a>
                       </td>
                       <td>
-                        <a href="{% url 'eliminar_profesor' profesor.pk %}" class="btn btn-outline-success my-2 my-sm-0" >Eliminar</a>
+                        <a href="{% url 'eliminar_alumno' alumno.pk %}" class="btn btn-outline-success my-2 my-sm-0" >Eliminar</a>
                       </td>
                       
 
