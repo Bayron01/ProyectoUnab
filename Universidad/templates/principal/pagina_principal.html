@@ -5,14 +5,6 @@
 
 {% block content %}
 	
-     <header>
-     	<div class="conteiner">
-     		<div class="row">
-     			<div class="col-12">
-     				  
-     		</div>
-     	</div>
-     </header>
 
      <section id="slide">
      	<div class="container">
@@ -27,21 +19,29 @@
      	<div class="container">
      		<div class="row">
      			<div class="col"><img src="{% static 'img/profesor_girafales.jpg'%}" class="img-fluid">
-          También es una composición de caracteres imprimibles (con grafema) generados por un algoritmo de cifrado que, aunque no tienen sentido para cualquier persona, sí puede ser descifrado por su destinatario original. En otras palabras, un texto es un entramado de signos con una intención comunicativa que adquiere sentido en determinado contexto.
-          <a href="{% url 'agregar_profesor' %}" class="btn btn-light" >Profesor</a>
+          <p>PROFESOR</p>
+          En esta sección, se podrá visualizar las características y datos personales de los nuevos y actuales docentes que pertenecerán a la universidad Andres bello.
+          <a href="{% url 'agregar_profesor' %}" class="btn btn-light" >AGREGAR</a>
+          <a href="{% url 'listar_profesor' %}" class="btn btn-light" >LISTAR</a>
           </div>
      			<div class="col"><img src="{% static 'img/alumno.jpg'%}" class="img-fluid">
-          También es una composición de caracteres imprimibles (con grafema) generados por un algoritmo de cifrado que, aunque no tienen sentido para cualquier persona, sí puede ser descifrado por su destinatario original. En otras palabras, un texto es un entramado de signos con una intención comunicativa que adquiere sentido en determinado contexto.
-          <a href="{% url 'agregar_profesor' %}" class="btn btn-light" >Alumno</a>
+          <p>ALUMNO</p>
+          En esta otra sección podremos visualizar los alumnos pertenecientes a la universidad, donde se podrá conocer sus datos personales y los cursos asociados. Así se podrá crear un perfil educativo para la universidad Andres bello.
+          <a href="{% url 'agregar_alumno' %}" class="btn btn-light" >AGREGAR</a>
+          <a href="{% url 'listar_alumno' %}" class="btn btn-light" >LISTAR</a>
           </div>
      			<div class="col"><img src="{% static 'img/curso.jpg'%}" class="img-fluid">
-          También es una composición de caracteres imprimibles (con grafema) generados por un algoritmo de cifrado que, aunque no tienen sentido para cualquier persona, sí puede ser descifrado por su destinatario original. En otras palabras, un texto es un entramado de signos con una intención comunicativa que adquiere sentido en determinado contexto.
-          <a href="{% url 'agregar_profesor' %}" class="btn btn-light" >Curso</a>
+          <p>CURSO</p>
+          En esta última sección, se podría ver el registro de los cursos que se llevaran a cabo en la universidad, por parte de los alumnos, a cargo de un respectivo profesor.
+          <a href="{% url 'agregar_curso' %}" class="btn btn-light" >AGREGAR</a>
+          <a href="{% url 'listar_curso' %}" class="btn btn-light" >LISTAR</a>
           </div>
      		
      		</div>
      	</div>
      </section>
+     
+
      <footer>
      	<p>universidad andres bello</p>
      </footer>

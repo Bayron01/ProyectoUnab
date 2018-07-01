@@ -11,6 +11,7 @@ def paginaprincipal(request):
 	template_name = 'principal/pagina_principal.html'
 	return render(request, template_name, data)
 
+
 @login_required(login_url='/auth/login')
 def agregarprofesor(request):
     data = {}
@@ -192,7 +193,7 @@ def agregarcurso(request):
 def listarcurso(request):
     data = {}
 
-    object_list = Cursocurso.objects.all().order_by('id')
+    object_list = Curso.objects.all().order_by('id')
     paginator = Paginator(object_list, 5)
     page = request.GET.get('page')
     
@@ -245,3 +246,5 @@ def eliminarcurso(request, curso_id):
 
     template_name = 'curso/eliminar_curso.html'
     return render(request, template_name, data)
+
+
