@@ -23,7 +23,7 @@ urlpatterns = [
     #Curso
     path('agregarcurso', views.agregarcurso, name='agregar_curso'),
     path('listarcurso', views.listarcurso, name='listar_curso'),
-    path('editarcurso/<int:alumno_id>', views.editarcurso, name='editar_curso'),
+    path('editarcurso/<int:curso_id>', views.editarcurso, name='editar_curso'),
     path('detallarcurso/<int:curso_id>', views.detallarcurso, name='detallar_curso'),
     path('eliminarcurso/<int:curso_id>', views.eliminarcurso, name="eliminar_curso"),
 

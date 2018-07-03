@@ -16,3 +16,4 @@ class CursoForm(ModelForm):
 	class Meta:
 		model = Curso
 		fields = ['id_curso', 'nombre', 'fecha_inicio', 'fecha_termino', 'cupos']
+		

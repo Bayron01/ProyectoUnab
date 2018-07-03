@@ -112,7 +112,7 @@ def agregaralumno(request):
 def listaralumno(request):
     data = {}
 
-    object_list = Profesor.objects.all().order_by('id')
+    object_list = Alumno.objects.all().order_by('id')
     paginator = Paginator(object_list, 5)
     page = request.GET.get('page')
     
